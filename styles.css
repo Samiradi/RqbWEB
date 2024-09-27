@@ -574,6 +574,43 @@ header {
   margin: 0 auto; 
 }
 
+/* persyaratan */
+
+#persyaratan {
+  background-image: url('./image/gedung-rq2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+  color: white;
+  text-align: center;
+}
+
+.persyaratan-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparansi */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.persyaratan-content h2 {
+  text-align: center;
+  padding: 0;
+} 
+
+.persyaratan-content ul {
+  list-style-type: none;
+}
+
+.persyaratan-content ul li {
+  font-size: 1rem;
+  margin: 10px 0;
+
+}
+
+
+
 /* Gaya Tombol CTA */
 .cta {
   text-align: center;
@@ -599,16 +636,14 @@ header {
 
 /* Animasi Blink */
 @keyframes blink {
-  0% {
-    background-color: blue;
+  0%, 100% {
+    transform: scale(1);
   }
   50% {
-    background-color: grey;
-  }
-  100% {
-    background-color: var(--primary-color);
+    transform: scale(1.05);
   }
 }
+
 
 /* Gaya Media Sosial */
 .social-media {
