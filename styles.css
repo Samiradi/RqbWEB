@@ -402,7 +402,7 @@ header {
 .mata-pelajaran ul li {
   margin: 10px 0;
   font-size: 1.2em;
-}
+} 
 
 /* Gaya untuk Section Ekstrakurikuler */
 .ekstrakurikuler {
@@ -614,7 +614,7 @@ header {
 /* Gaya Tombol CTA */
 .cta {
   text-align: center;
-  margin: 20px 0;
+  margin: 50px 0;
 }
 
 .cta button {
