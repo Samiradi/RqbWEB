@@ -135,3 +135,33 @@ nextButton.addEventListener("click", () => {
 
 // Inisialisasi: tampilkan item pertama
 showCarouselItem(currentIndex);
+
+const kegiatanWrapper = document.querySelector("#kegiatan .carousel-wrapper");
+const kegiatanItems = document.querySelectorAll("#kegiatan .carousel-item");
+const kegiatanPrevButton = document.querySelector("#kegiatan .prev-btn");
+const kegiatanNextButton = document.querySelector("#kegiatan .next-btn");
+
+let kegiatanIndex = 0;
+const kegiatanTotalItems = kegiatanItems.length;
+
+function showKegiatanItem(index) {
+  if (index < 0) {
+    kegiatanIndex = kegiatanTotalItems - 1;
+  } else if (index >= kegiatanTotalItems) {
+    kegiatanIndex = 0;
+  } else {
+    kegiatanIndex = index;
+  }
+
+  kegiatanWrapper.style.transform = `translateX(-${kegiatanIndex * 100}%)`;
+}
+
+kegiatanPrevButton.addEventListener("click", () => {
+  showKegiatanItem(kegiatanIndex - 1);
+});
+
+kegiatanNextButton.addEventListener("click", () => {
+  showKegiatanItem(kegiatanIndex + 1);
+});
+
+showKegiatanItem(kegiatanIndex);
