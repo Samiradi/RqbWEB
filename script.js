@@ -135,3 +135,28 @@ nextButton.addEventListener("click", () => {
 
 // Inisialisasi: tampilkan item pertama
 showCarouselItem(currentIndex);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const kegiatanSlides = document.querySelectorAll(".kegiatan-slide");
+  const kegiatanPrevBtn = document.querySelector(".kegiatan-prev");
+  const kegiatanNextBtn = document.querySelector(".kegiatan-next");
+  let kegiatanIndex = 0;
+
+  function showKegiatanSlide(index) {
+    kegiatanSlides.forEach((slide, i) => {
+      slide.style.display = i === index ? "block" : "none";
+    });
+  }
+
+  kegiatanPrevBtn.addEventListener("click", function () {
+    kegiatanIndex = (kegiatanIndex - 1 + kegiatanSlides.length) % kegiatanSlides.length;
+    showKegiatanSlide(kegiatanIndex);
+  });
+
+  kegiatanNextBtn.addEventListener("click", function () {
+    kegiatanIndex = (kegiatanIndex + 1) % kegiatanSlides.length;
+    showKegiatanSlide(kegiatanIndex);
+  });
+
+  showKegiatanSlide(kegiatanIndex);
+});

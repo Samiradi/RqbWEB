@@ -404,7 +404,101 @@ header {
 .mata-pelajaran ul li {
   margin: 10px 0;
   font-size: 1.2em;
-} 
+}
+
+/* Kegiatan section styles */
+#kegiatan {
+  text-align: center;
+  margin: 50px 0;
+  color: var(--secondary-color);
+  background-color: var(--background-color);
+}
+
+.kegiatan-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kegiatan-slides {
+  display: flex;
+  transition: transform 2s ease;
+  will-change: transform;
+}
+
+.kegiatan-slide {
+  min-width: 100%;
+  transition: opacity 2s ease;
+  box-sizing: border-box;
+}
+
+.kegiatan-slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.kegiatan-prev,
+.kegiatan-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+.kegiatan-prev {
+  left: 10px;
+}
+
+.kegiatan-next {
+  right: 10px;
+}
+
+.kegiatan-prev:hover,
+.kegiatan-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media query for tablet screens */
+@media (max-width: 768px) {
+  .kegiatan-slider {
+    max-width: 600px; /* Adjust the slider width */
+  }
+
+  .kegiatan-slide img {
+    width: 90%; /* Make the images smaller */
+  }
+
+  .kegiatan-prev, .kegiatan-next {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
+
+/* Media query for smartphone screens */
+@media (max-width: 480px) {
+  .kegiatan-slider {
+    max-width: 100%; /* Ensure the slider takes full screen width */
+  }
+
+  .kegiatan-slide img {
+    width: 350px;
+    height: 250px; /* Further reduce image size */
+  }
+
+  .kegiatan-prev, .kegiatan-next {
+    font-size: 18px;
+    padding: 6px;
+  }
+}
+
 
 /* Gaya untuk Section Ekstrakurikuler */
 .ekstrakurikuler {
