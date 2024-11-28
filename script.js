@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(() => {
     showSlides();
-  }, 9000);
+  }, 8000);
 
   const navLeft = document.querySelector(".slide-nav.left");
   const navRight = document.querySelector(".slide-nav.right");
